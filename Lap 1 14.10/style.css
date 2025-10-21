@@ -71,6 +71,11 @@
     transition: transform 0.3s;
     }
 
+    section img:hover 
+    {
+    transform: scale(1.05);
+    }
+
     .project:hover
     {
     transform: scale(1.03);
@@ -90,4 +95,16 @@
     {
     color: #58a6ff;
     text-decoration: none;
+    }
+
+    #contact img 
+    {
+    width: 40px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+    }
+
+#contact img:hover
+    {
+    transform: scale(1.2);
     }
