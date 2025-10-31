@@ -17,27 +17,38 @@ for (let i = 0; i < Back.length; i++)
 // 3️⃣ Change heading text (#title) to "Welcome to the DOM Lab!".
 document.getElementById("title").textContent = "Welcome to the DOM Lab!";
 
-
 // 4️⃣ Add a solid black border to all <div> elements.
-
+let divs = document.getElementsByTagName("div");
+for (let i = 0; i < divs.length; i++) 
+{
+    divs[i].style.border = "2px solid black";
+}
 
 // 5️⃣ Increase font size of the first <h1> to 36px.
 document.querySelector("h1").style.fontSize = "36px";
 
 // 6️⃣ Change text color of elements with class="highlight" to blue.
-
+let highlights = document.getElementsByClassName("highlight");
+for (let i = 0; i < highlights.length; i++)
+{
+    highlights[i].style.color = "blue";
+}
 
 // 7️⃣ Add CSS class "active" to the first <div>.
-
+document.querySelector("div").classList.add("active");
 
 // 8️⃣ Change the <body> background color to lightblue.
-
+document.body.style.backgroundColor = "lightblue";
 
 // 9️⃣ Set the font family of all <p> elements to Arial.
-
+let paragraphs = document.getElementsByTagName("p");
+for (let i = 0; i < paragraphs.length; i++)
+{
+    paragraphs[i].style.fontFamily = "Arial";
+}
 
 // 🔟 Change the image source of #sampleImage.
-
+document.getElementById("sampleImage").src="Photo/Florence.png";
 
 // 🟦 PART 2: Creating and Appending Elements (11–20)
 
