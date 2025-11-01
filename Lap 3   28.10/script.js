@@ -167,30 +167,65 @@ document.addEventListener("keydown", (event) => {
 // 🟧 PART 4: Modifying and Traversing DOM (31–40)
 
 // 3️⃣1️⃣ Change text of the first <li>.
+document.querySelector("li").textContent = "Updated first list item";
 
 
 // 3️⃣2️⃣ Get input value when button clicked.
+document.getElementById("displayButton").addEventListener("click", () => {
+    alert("Input value: " + document.getElementById("userInput").value);
+});
 
 
 // 3️⃣3️⃣ Count number of <p> and alert the count.
-
+let countBtn = document.createElement("button");
+countBtn.textContent = "Count <p> elements";
+countBtn.onclick = () => {
+    let count = document.getElementsByTagName("p").length;
+    alert("Number of paragraphs: " + count);
+};
+document.body.appendChild(countBtn);
 
 // 3️⃣4️⃣ Remove all <p> elements.
+let removeBtn = document.createElement("button");
+removeBtn.textContent = "Remove all <p>";
+removeBtn.onclick = () => {
+    document.querySelectorAll("p").forEach(p => p.remove());
+};
+document.body.appendChild(removeBtn);
 
 
 // 3️⃣5️⃣ Replace existing <h2> with new one.
-
+let newHeading = document.createElement("h2");
+newHeading.textContent = "This is the new H2!";
+let oldH2 = document.querySelector("h2");
+if (oldH2) oldH2.replaceWith(newHeading);
 
 // 3️⃣6️⃣ Add CSS class 'highlighted' to all <li>.
+document.querySelectorAll("li").forEach(li => li.classList.add("highlighted"));
 
 
 // 3️⃣7️⃣ Toggle a CSS class on <div> when clicked.
-
+document.querySelectorAll("div").forEach(div =>
+    div.addEventListener("click", () => div.classList.toggle("active"))
+);
 
 // 3️⃣8️⃣ Clone an existing element and append copy.
+let original = document.querySelector("div");
+if (original) {
+  let copy = original.cloneNode(true); // clone with children
+    document.body.appendChild(copy);
+}
 
 
 // 3️⃣9️⃣ Scroll smoothly to bottom when button clicked.
+let scrollBtn = document.createElement("button");
+scrollBtn.textContent = "Scroll to Bottom";
+scrollBtn.onclick = () => window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+document.body.appendChild(scrollBtn);
 
 
 // 4️⃣0️⃣ Build list dynamically using innerHTML from an array.
+let items = ["JavaScript", "HTML", "CSS", "React"];
+let ul = document.createElement("ul");
+ul.innerHTML = items.map(item => `<li>${item}</li>`).join("");
+document.body.appendChild(ul);
