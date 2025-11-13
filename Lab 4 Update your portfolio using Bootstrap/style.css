@@ -10,9 +10,9 @@ body
 {
     background: linear-gradient(
         135deg, 
-        #2c4187 0%,   /* أزرق داكن */
-        #1b2b5a 50%,  /* أزرق متوسط */
-        #12161c 100%  /* داكن جدًا */
+        #2c4187 0%,   
+        #1b2b5a 50%,  
+        #12161c 100%  
     );
     color: #e6edf3;
     line-height: 1.7;
@@ -111,11 +111,11 @@ html
 
 .btn-primary 
 {
-    background-color: #238636;
+    background-color: #0c27ac;
     border: none;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
-.btn-primary:hover { background-color: #2ea043; transform: translateY(-2px); }
+.btn-primary:hover { background-color: #0c27ac; transform: translateY(-2px); }
 .exp
 {
     color: #5d62ff;
