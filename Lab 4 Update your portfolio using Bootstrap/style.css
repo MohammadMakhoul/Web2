@@ -116,7 +116,15 @@ html
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 .btn-primary:hover { background-color: #2ea043; transform: translateY(-2px); }
+.exp
+{
+    color: #5d62ff;
+}
+.expx
+{
+    color: #5d62ff;
 
+}
 #contact img 
 {
     transition: transform 0.3s ease, filter 0.3s ease;
