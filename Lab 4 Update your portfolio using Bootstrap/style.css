@@ -119,16 +119,11 @@ html
 .exp
 {
     color: #5d62ff;
-}
-.expx
-{
-    color: #5d62ff;
 
 }
 #contact img 
 {
     transition: transform 0.3s ease, filter 0.3s ease;
-    filter: grayscale(100%) brightness(0.9);
 }
 #contact img:hover 
 {
